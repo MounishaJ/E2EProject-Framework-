@@ -3,6 +3,8 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
@@ -10,30 +12,40 @@ public class LoginPage {
 
 	WebDriver driver;
 	
+	public LoginPage(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
 	
-	By email=By.id("user_email");
+/*	By email=By.id("user_email");
 	By pass=By.id("user_password");
 	By loginbtn=By.xpath("//input[@value=\"Log In\"]");
+	*/
 	
+	@FindBy(id="user_email")
+	WebElement useremail;
 	
-	public LoginPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
-	    this.driver=driver;
-	}
+	@FindBy(id="user_password")
+	WebElement userpassword;
+	
+	@FindBy(xpath="//input[@value=\"Log In\"]")
+	WebElement loginbtn;
+	
 
 	public WebElement Email()
 	{
-		return driver.findElement(email);
+		return useremail;
 	}
 	
 	public WebElement Pass()
 	{
-		return driver.findElement(pass);
+		return userpassword;
 	}
 	
 	public WebElement login() 
 	{
-		return driver.findElement(loginbtn);
+		return loginbtn;
 	}
 	
 }

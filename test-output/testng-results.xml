@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="116403" started-at="2019-06-17T12:41:27Z" finished-at="2019-06-17T12:43:23Z">
+  <suite name="Default suite" duration-ms="102531" started-at="2019-06-18T12:47:15Z" finished-at="2019-06-18T12:48:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="116403" started-at="2019-06-17T12:41:27Z" finished-at="2019-06-17T12:43:23Z">
+    <test name="Default test" duration-ms="102531" started-at="2019-06-18T12:47:15Z" finished-at="2019-06-18T12:48:58Z">
       <class name="Academy.Home">
-        <test-method status="PASS" signature="basepageNavigation()[pri:0, instance:Academy.Home@4c70fda8]" name="basepageNavigation" duration-ms="116228" started-at="2019-06-17T12:41:27Z" finished-at="2019-06-17T12:43:23Z">
+        <test-method status="PASS" signature="basepageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Academy.Home@14acaea5]" name="basepageNavigation" duration-ms="55453" started-at="2019-06-18T12:47:15Z" data-provider="getData" finished-at="2019-06-18T12:48:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mounisha2893@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test2128]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Non restricetduser]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basepageNavigation -->
+        <test-method status="PASS" signature="basepageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Academy.Home@14acaea5]" name="basepageNavigation" duration-ms="46979" started-at="2019-06-18T12:48:11Z" data-provider="getData" finished-at="2019-06-18T12:48:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jeelamounisha2893@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test2128@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Restricted user]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basepageNavigation -->
