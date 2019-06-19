@@ -1,8 +1,9 @@
 package Academy;
 
 import java.io.IOException;
-import java.util.Properties;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,14 +13,22 @@ import resources.Base;
 //17/6/2019
 public class Home  extends Base
 {
-	public static Properties prop=new Properties();
+
+	@BeforeClass
+	public void initialize() throws IOException
+	{
+		driver= initializeDriver();
+			
+	}
+	
+	
 	
 	@Test(dataProvider = "getData")
 	public void basepageNavigation(String username, String password,String text) throws IOException
 	
 	{
-		driver= initializeDriver();
-		driver.get("http://qaclickacademy.com");
+		System.out.println("Started Home test");
+		driver.get(prop.getProperty("url"));
 		LandingPage l=new LandingPage(driver);
 		l.GotoLogin().click();
 		LoginPage lp=new LoginPage(driver);
@@ -29,7 +38,15 @@ public class Home  extends Base
 		System.out.println(text);
 
 	}
+	
+	@AfterClass
+	public void teardown()
+	{
+		driver.close();
+		//driver=null;
+	}
 
+	
 	@DataProvider
 	public Object[][] getData()
 	{

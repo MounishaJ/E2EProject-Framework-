@@ -5,20 +5,21 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.Test;
+
+import resources.Base;
+
 
 //17/6/2019
 
-public class LandingPage {
+public class LandingPage extends Base {
 	
-	WebDriver driver;
+	//WebDriver driver;
 	
 	
 	By loginbtn=By.linkText("Login");
 	By Registerbtn=By.linkText("Register");
-
-	
+	By text=By.xpath("//div[@class='text-center'][h2]");
+	By navbar=By.cssSelector("ul[class='nav navbar-nav navbar-right']");
 	
 	public LandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -35,5 +36,14 @@ public class LandingPage {
 		return driver.findElement(Registerbtn);
 	}
 	
-	
+public WebElement Getdata()
+{
+	return driver.findElement(text);
+}
+
+public WebElement NavBar()
+{
+	return driver.findElement(navbar);
+}
+
 }

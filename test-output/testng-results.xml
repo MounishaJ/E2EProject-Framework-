@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="102531" started-at="2019-06-18T12:47:15Z" finished-at="2019-06-18T12:48:58Z">
+  <suite name="Suite" duration-ms="99973" started-at="2019-06-19T11:07:35Z" finished-at="2019-06-19T11:09:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="102531" started-at="2019-06-18T12:47:15Z" finished-at="2019-06-18T12:48:58Z">
+    <test name="Test" duration-ms="99973" started-at="2019-06-19T11:07:35Z" finished-at="2019-06-19T11:09:15Z">
+      <class name="Academy.ValidateTitle">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Academy.ValidateTitle@27efef64]" name="initialize" is-config="true" duration-ms="5094" started-at="2019-06-19T11:07:53Z" finished-at="2019-06-19T11:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="basepageNavigation()[pri:0, instance:Academy.ValidateTitle@27efef64]" name="basepageNavigation" duration-ms="7751" started-at="2019-06-19T11:07:58Z" finished-at="2019-06-19T11:08:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basepageNavigation -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Academy.ValidateTitle@27efef64]" name="teardown" is-config="true" duration-ms="155" started-at="2019-06-19T11:08:05Z" finished-at="2019-06-19T11:08:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Academy.ValidateTitle -->
+      <class name="Academy.aValidateNavigatioonbar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Academy.aValidateNavigatioonbar@59f99ea]" name="initialize" is-config="true" duration-ms="7076" started-at="2019-06-19T11:07:35Z" finished-at="2019-06-19T11:07:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="basepageNavigation()[pri:0, instance:Academy.aValidateNavigatioonbar@59f99ea]" name="basepageNavigation" duration-ms="9969" started-at="2019-06-19T11:07:42Z" finished-at="2019-06-19T11:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basepageNavigation -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Academy.aValidateNavigatioonbar@59f99ea]" name="teardown" is-config="true" duration-ms="415" started-at="2019-06-19T11:07:52Z" finished-at="2019-06-19T11:07:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Academy.aValidateNavigatioonbar -->
       <class name="Academy.Home">
-        <test-method status="PASS" signature="basepageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Academy.Home@14acaea5]" name="basepageNavigation" duration-ms="55453" started-at="2019-06-18T12:47:15Z" data-provider="getData" finished-at="2019-06-18T12:48:11Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Academy.Home@6f7fd0e6]" name="initialize" is-config="true" duration-ms="3393" started-at="2019-06-19T11:08:06Z" finished-at="2019-06-19T11:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="basepageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Academy.Home@6f7fd0e6]" name="basepageNavigation" duration-ms="43721" started-at="2019-06-19T11:08:09Z" data-provider="getData" finished-at="2019-06-19T11:08:53Z">
           <params>
             <param index="0">
               <value>
@@ -28,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basepageNavigation -->
-        <test-method status="PASS" signature="basepageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Academy.Home@14acaea5]" name="basepageNavigation" duration-ms="46979" started-at="2019-06-18T12:48:11Z" data-provider="getData" finished-at="2019-06-18T12:48:58Z">
+        <test-method status="PASS" signature="basepageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Academy.Home@6f7fd0e6]" name="basepageNavigation" duration-ms="22144" started-at="2019-06-19T11:08:53Z" data-provider="getData" finished-at="2019-06-19T11:09:15Z">
           <params>
             <param index="0">
               <value>
@@ -49,7 +81,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basepageNavigation -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Academy.Home@6f7fd0e6]" name="teardown" is-config="true" duration-ms="176" started-at="2019-06-19T11:09:15Z" finished-at="2019-06-19T11:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- Academy.Home -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
