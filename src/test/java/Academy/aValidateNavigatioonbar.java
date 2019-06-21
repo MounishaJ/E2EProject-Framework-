@@ -3,6 +3,8 @@ package Academy;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -19,20 +21,15 @@ public class aValidateNavigatioonbar  extends Base
 {
 	
 
+	 public static Logger log = LogManager.getLogger(Home.class.getName());
 	@BeforeClass
 	public void initialize() throws IOException
 	{
 		driver= initializeDriver();
 		
-		
+		log.info("successfully intialize driver");
 	}
-	/*  @BeforeTest 
-	  public void beforetest() throws IOException 
-	  {
-		  driver= initializeDriver();
-	 
-	  
-	  }*/
+	
 	 
 	@AfterClass
 	public void teardown()
@@ -42,7 +39,7 @@ public class aValidateNavigatioonbar  extends Base
 	}
 	
 	@Test
-	public void basepageNavigation() throws IOException
+	public void ValidateNavigation() throws IOException
 	
 	{
 		System.out.println("driver: "+driver);
@@ -50,15 +47,10 @@ public class aValidateNavigatioonbar  extends Base
 		LandingPage l=new LandingPage(driver);
 		Assert.assertTrue(l.NavBar().isDisplayed());
 		System.out.println("completed avalidatenaviga test"+l.NavBar().getText());
+		log.info("Navbar displayed");
 	
 	
 	}
 	
-	/*@AfterTest
-	public void teardown()
-	{
-		driver.close();
-		//driver=null;
-		
-	}*/
+	
 }

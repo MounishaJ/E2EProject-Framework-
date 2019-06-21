@@ -3,6 +3,7 @@ package Academy;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -17,6 +18,8 @@ import resources.Base;
 //19/6/2019
 public class ValidateTitle  extends Base
 {
+	
+	 public static Logger log = LogManager.getLogger(Home.class.getName());
 	@BeforeClass
 	public void initialize() throws IOException
 	{
@@ -25,12 +28,7 @@ public class ValidateTitle  extends Base
 		
 	}
 	
-	/* @BeforeTest
-	 public void beforetest() throws IOException { driver=
-	 initializeDriver();
-	 
-	  }*/
-	 
+	
 	@AfterClass
 	public void teardown()
 	{
@@ -40,7 +38,7 @@ public class ValidateTitle  extends Base
 	
 	
 	@Test
-	public void basepageNavigation() throws IOException
+	public void ValidateTitlemethod() throws IOException
 	
 	{
 		System.out.println("driver: "+driver);
@@ -49,14 +47,7 @@ public class ValidateTitle  extends Base
 		//LoginPage lp=new LoginPage(driver);
 		Assert.assertEquals(l.Getdata().getText(), "FEATURED COURSES");  //validating the text by using assertion
 		System.out.println("completed basepagenavigation test"+l.Getdata().getText());
-	
+		log.info("validated text");
 	
 	}
-	
-	/*@AfterTest
-	public void teardown()
-	{
-		driver.close();
-		//driver=null;
-	}*/
 }

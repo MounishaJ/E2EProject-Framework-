@@ -1,7 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 118.445 s <<< FAILURE! - in TestSuite
-teardown(Academy.Home)  Time elapsed: 1.761 s  <<< FAILURE!
-java.lang.NullPointerException
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 2, Time elapsed: 195.619 s <<< FAILURE! - in TestSuite
+initialize(Academy.aValidateNavigatioonbar)  Time elapsed: 71.93 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: unable to discover open pages
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 63.33 seconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-UUTUU8G', ip: '192.168.1.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: driver.version: ChromeDriver
+	at Academy.aValidateNavigatioonbar.initialize(aValidateNavigatioonbar.java:28)
+
+ValidateTitlemethod(Academy.ValidateTitle)  Time elapsed: 42.458 s  <<< FAILURE!
+java.lang.AssertionError: expected [FEATURED COUR12SES] but found [FEATURED COURSES]
+	at Academy.ValidateTitle.ValidateTitlemethod(ValidateTitle.java:48)
 

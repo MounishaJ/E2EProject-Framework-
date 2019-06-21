@@ -8,6 +8,13 @@
   <name>E2EProject</name>
   <url>http://maven.apache.org</url>
       <build>
+            <resources>                                 <!--  configuring log4j into maven project  -->
+            <resource>
+        <directory>src/main/java/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      </resources> 
+           
       <plugins>       <!-- Integrate testng file into pom.xml file by using sre-fire plugin -->
             <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -39,6 +46,34 @@
     <artifactId>testng</artifactId>
     <version>6.14.3</version>
     <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.3</version>
+    <scope>compile</scope>
+</dependency>
+
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.11.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.11.2</version>
+      </dependency>
+<dependency>								<!-- the below 2 dependencies for extent reports -->
+	<groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.5</version>
+</dependency>
+
+<dependency>
+	<groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
 </dependency>
 
   </dependencies>

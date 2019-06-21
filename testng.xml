@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite"  >
+<listeners>
+	<listener class-name="Academy.listeners"/>
+	<!-- <listener class-name="resources.ExtentReporterNG"/> -->
+</listeners>
   <test thread-count="1" verbose="1" name="Test" parallel="false">
     <classes>
        <class name="Academy.aValidateNavigatioonbar"/>
